@@ -1,0 +1,7 @@
+@media (min-width: 1200px) {
+    .upButton {
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
