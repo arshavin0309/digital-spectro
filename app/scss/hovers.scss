@@ -4,4 +4,31 @@
             transform: scale(1.2);
         }
     }
+
+    .main-advantages {
+        &__item {
+            &:hover {
+                background: var(--blue-dark);
+
+                h3 {
+                    color: var(--white);
+                }
+
+                p {
+                    color: var(--white);
+                }
+
+                .main-advantages__arrow {
+                    transform: rotate(45deg);
+                    filter: brightness(0) saturate(100%) invert(100%) sepia(4%) saturate(644%) hue-rotate(119deg) brightness(118%) contrast(100%);
+                }
+
+                picture {
+                    img {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
 }
