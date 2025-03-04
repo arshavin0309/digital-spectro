@@ -1,3 +1,23 @@
 @media (max-width: 1300px) {
-    
+    .footer {
+        .container {
+            grid-template-columns: 1fr;
+            row-gap: 30px;
+            padding-bottom: 115px;
+        }
+
+        &__box {
+            flex-direction: row-reverse;
+            gap: 60px;
+            justify-content: start;
+        }
+
+        &__info {
+            text-align: left;
+        }
+
+        .menu {
+            gap: 70px;
+        }
+    }
 }

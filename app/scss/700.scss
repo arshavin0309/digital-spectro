@@ -1,3 +1,43 @@
 @media (max-width: 700px) {
-    
+    .footer {
+        .container {
+            padding-bottom: 60px;
+        }
+
+        &__link {
+            width: 55px;
+            height: 55px;
+
+            &--web {
+                background: var(--white) url(../images/footer-web.svg) center / 28px no-repeat;
+            }
+
+            &--win {
+                background: var(--white) url(../images/footer-win.svg) center / 27px no-repeat;
+            }
+
+            &--mac {
+                background: var(--white) url(../images/footer-mac.svg) center / 28px 34px no-repeat;
+            }
+
+            &--play-market {
+                background: var(--white) url(../images/footer-play-market.svg) center / 25px 27px no-repeat;
+            }
+        }
+
+        &__box {
+            flex-direction: column-reverse;
+            gap: 50px;
+            align-items: start;
+        }
+
+        &__contacts {
+            gap: 15px;
+        }
+
+        .menu {
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
 }

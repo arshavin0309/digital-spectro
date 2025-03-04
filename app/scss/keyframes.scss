@@ -181,3 +181,25 @@
         transform: none;
     }
 }
+
+@keyframes animationLine3 {
+    0% {
+        transform: none;
+    }
+
+    25% {
+        transform: scaleX(1.5);
+    }
+
+    50% {
+        transform: none;
+    }
+
+    75% {
+        transform: scaleX(1.2);
+    }
+
+    100% {
+        transform: none;
+    }
+}

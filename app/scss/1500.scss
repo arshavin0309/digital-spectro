@@ -1,3 +1,24 @@
 @media (max-width: 1500px) {
+    .footer {
+        &__link {
+            width: 125px;
+            height: 125px;
 
+            &--web {
+                background: var(--white) url(../images/footer-web.svg) center / 65px no-repeat;
+            }
+
+            &--win {
+                background: var(--white) url(../images/footer-win.svg) center / 62px no-repeat;
+            }
+
+            &--mac {
+                background: var(--white) url(../images/footer-mac.svg) center / 63px 78px no-repeat;
+            }
+
+            &--play-market {
+                background: var(--white) url(../images/footer-play-market.svg) center / 56px 62px no-repeat;
+            }
+        }
+    }
 }

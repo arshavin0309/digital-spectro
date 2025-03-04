@@ -1,3 +1,47 @@
 @media (max-width: 600px) {
-    
+    .header {
+        .container {
+            height: 70px;
+        }
+
+        .btn {
+            display: none;
+        }
+
+        &__logo {
+            width: 133px;
+            height: 30px;
+        }
+
+        .menu {
+            top: 70px;
+            height: calc(100% - 70px);
+        }
+    }
+
+    section {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    h1 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    h2 {
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+    h3,
+    .h3 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .textm {
+        font-size: 16px;
+        line-height: 18px;
+    }
 }

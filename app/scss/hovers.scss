@@ -1,7 +1,35 @@
 @media (min-width: 1200px) {
+    .header {
+        .menu {
+            &>.menu-item {
+                &>a {
+                    &:hover {
+                        color: var(--blue-activ);
+                    }
+                }
+            }
+        }
+    }
+
     .upButton {
         &:hover {
             transform: scale(1.2);
+        }
+    }
+
+    .main-hero {
+        &__link {
+            &:hover {
+                background: var(--blue-dark);
+            }
+        }
+    }
+
+    .main-bonus {
+        &__link {
+            &:hover {
+                background: var(--blue-dark);
+            }
         }
     }
 
@@ -26,6 +54,130 @@
                 picture {
                     img {
                         transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        &__link {
+            &--web {
+                &:hover {
+                    background: var(--blue-activ) url(../images/footer-web-white.svg) center / 78px no-repeat;
+                }
+            }
+
+            &--win {
+                &:hover {
+                    background: var(--blue-activ) url(../images/footer-win-white.svg) center / 75px no-repeat;
+                }
+            }
+
+            &--mac {
+                &:hover {
+                    background: var(--blue-activ) url(../images/footer-mac-white.svg) center / 76px 94px no-repeat;
+                }
+            }
+
+            &--app-store {
+                &:hover {
+                    background: var(--blue-activ) url(../images/footer-app-store-white.svg) center / 82px no-repeat;
+                }
+            }
+
+            &--play-market {
+                &:hover {
+                    background: var(--blue-activ) url(../images/footer-play-market-white.svg) center / 68px 75px no-repeat;
+                }
+            }
+        }
+
+        a {
+            &:hover {
+                color: var(--blue-activ);
+            }
+        }
+
+        .menu {
+            &>.menu-item {
+                &>a {
+                    &:hover {
+                        color: var(--blue-activ);
+                    }
+                }
+            }
+        }
+    }
+
+    .btn {
+        &:hover {
+            background: var(--blue-dark);
+        }
+
+        &--white {
+            &:hover {
+                background: var(--blue-activ);
+                color: var(--white);
+            }
+        }
+    }
+
+    .main-start {
+        &__link {
+            &:hover {
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    .cookies {
+        a {
+            &:hover {
+                color: var(--blue-activ);
+            }
+        }
+    }
+
+    .main-platform {
+        &__item {
+            &:hover {
+                background: var(--blue-dark);
+
+                h3,
+                p {
+                    color: var(--white);
+                }
+            }
+
+            &:nth-child(1) {
+                &:hover {
+                    &:after {
+                        background: var(--blue-dark) url(../images/main-platform-icon-white-1.svg) center / 24px no-repeat;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                &:hover {
+                    &:after {
+                        background: var(--blue-dark) url(../images/main-platform-icon-white-2.svg) center / 24px no-repeat;
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+                &:hover {
+                    &:after {
+                        background: var(--blue-dark) url(../images/main-platform-icon-white-3.svg) center / 24px no-repeat;
+                    }
+                }
+            }
+
+            &:nth-child(4) {
+                &:hover {
+                    &:after {
+                        background: var(--blue-dark) url(../images/main-platform-icon-white-4.svg) center / 24px no-repeat;
                     }
                 }
             }
