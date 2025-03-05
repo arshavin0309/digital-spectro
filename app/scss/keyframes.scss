@@ -182,13 +182,13 @@
     }
 }
 
-@keyframes animationLine3 {
+@keyframes animationLine-down {
     0% {
         transform: none;
     }
 
     25% {
-        transform: scaleX(1.5);
+        transform: scaleY(1.5);
     }
 
     50% {
@@ -196,7 +196,21 @@
     }
 
     75% {
-        transform: scaleX(1.2);
+        transform: scaleY(1.2);
+    }
+
+    100% {
+        transform: none;
+    }
+}
+
+@keyframes animationLine-up {
+    0% {
+        transform: none;
+    }
+
+    50% {
+        transform: scaleY(-1.1);
     }
 
     100% {

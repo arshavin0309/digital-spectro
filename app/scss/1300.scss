@@ -20,4 +20,29 @@
             gap: 70px;
         }
     }
+
+    .main-start {
+        &__container {
+            padding: 50px 20px;
+        }
+
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__item {
+            &:nth-child(1) {
+                padding-right: 400px;
+                grid-row: 1;
+                grid-column: 1/3;
+                background-size: 215px 180px;
+                background-position: right 150px bottom;
+            }
+
+            &:nth-child(4) {
+                grid-row: 3;
+                grid-column: 1/3;
+            }
+        }
+    }
 }

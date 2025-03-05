@@ -21,4 +21,21 @@
             }
         }
     }
+
+    .main-platform {
+        &__banner {
+            background-size: 320px 167px;
+        }
+    }
+
+    .main-banner {
+        &__container {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        &__image-1 {
+            display: none;
+        }
+    }
 }

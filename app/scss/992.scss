@@ -1,3 +1,16 @@
 @media (max-width: 992px) {
-    
+    .main-advantages {
+        &__item {
+            grid-template-columns: 1fr;
+        }
+
+        &__arrow {
+            top: 50px;
+            right: 25px;
+        }
+
+        &__box {
+            padding: 140px 25px 50px;
+        }
+    }
 }

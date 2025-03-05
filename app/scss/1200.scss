@@ -8,7 +8,7 @@
 
         &.active {
             background: var(--blue-light);
-            backdrop-filter: initial;
+            //backdrop-filter: initial;
         }
 
         &__logo {
@@ -33,11 +33,13 @@
             align-items: start;
             gap: 0;
             top: 80px;
-            left: 0;
+            right: 0;
             width: 100%;
+            max-width: 400px;
             height: calc(100% - 80px);
             background: var(--blue-light);
-            transform: translateX(-150%);
+            transform: translateX(400px);
+            border-top: 1px solid var(--grey-text);
 
             &.active {
                 transform: none;
@@ -49,8 +51,9 @@
                 &>a {
                     display: block;
                     width: 100%;
-                    padding: 15px 30px;
-                    border-bottom: 1px solid var(--blue-light);
+                    padding: 20px 30px;
+                    font-size: 20px;
+                    border-bottom: 1px solid var(--grey-text);
                 }
             }
         }
@@ -75,5 +78,131 @@
     .h3 {
         font-size: 24px;
         line-height: 28px;
+    }
+
+    .main-review {
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .heading {
+            max-width: 490px;
+        }
+    }
+
+    .heading {
+        gap: 15px;
+        grid-template-columns: 1fr;
+    }
+
+    .main-hero {
+        margin-top: 160px;
+
+        &__heading {
+            display: none;
+        }
+
+        &__box {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        h1 {
+            max-width: 605px;
+        }
+
+        p {
+            max-width: 355px;
+        }
+
+        &__list {
+            display: block;
+            padding: 320px 20px 20px;
+
+            &::before {
+                right: 38px;
+                top: -33px;
+                width: 220px;
+            }
+        }
+
+        &__item {
+            display: none;
+        }
+
+        &__link {
+            right: 73px;
+            top: -75px;
+        }
+    }
+
+    .swiper1 {
+        display: block;
+    }
+
+    .main-advantages {
+        &__arrow {
+            top: 25px;
+        }
+    }
+
+    .main-platform {
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__banner {
+            padding-right: 400px;
+            min-height: 200px;
+            grid-row: 3;
+            grid-column: 1/3;
+            background-position: right 30px bottom;
+        }
+    }
+
+    .main-bonus {
+        &__container {
+            padding: 50px 20px 190px;
+            background: var(--blue-light) url(../images/main-bonus.svg) right bottom / 704px 100% no-repeat;
+
+            &::before {
+                right: 15px;
+                bottom: -34px;
+                width: 220px;
+                height: 156px;
+                background: url(../images/main-hero-list.svg) center / contain no-repeat;
+                transform: rotate(180deg);
+            }
+        }
+
+        h2 {
+            margin-bottom: 25px;
+        }
+
+        &__link {
+            right: 50px;
+            bottom: -75px;
+        }
+    }
+
+    .main-banner {
+        &__box {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    html {
+        &::after {
+            min-width: 390px;
+            background-size: cover;
+            background-position: right top -96px;
+        }
+    }
+
+    .footer {
+        &::after {
+            min-width: 390px;
+            background-size: cover;
+        }
     }
 }

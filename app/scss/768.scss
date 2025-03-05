@@ -1,3 +1,25 @@
 @media (max-width: 768px) {
-    
+    .main-review {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .main-platform {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+
+        &__item {
+            min-height: 215px;
+        }
+
+        &__banner {
+            padding: 50px 25px 320px;
+            grid-row: initial;
+            grid-column: initial;
+            background-size: 445px 220px;
+            background-position: center bottom 30px;
+        }
+    }
 }

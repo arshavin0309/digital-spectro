@@ -14,8 +14,11 @@
         }
 
         .menu {
+            min-width: 390px;
+            max-width: 100%;
             top: 70px;
             height: calc(100% - 70px);
+            transform: translateX(100%);
         }
     }
 
@@ -43,5 +46,158 @@
     .textm {
         font-size: 16px;
         line-height: 18px;
+    }
+
+    .main-review {
+        &__item {
+            min-height: 270px;
+            padding: 30px 15px;
+            gap: 30px;
+        }
+    }
+
+    .heading {
+        margin-bottom: 30px;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .main-hero {
+        margin-top: 120px;
+
+        h1 {
+            max-width: 300px;
+        }
+
+        p {
+            max-width: 265px;
+        }
+
+        &__list {
+            margin-top: 110px;
+            padding: 355px 10px 10px;
+
+            &::before {
+                top: -34px;
+                right: -18px;
+            }
+        }
+
+        &__link {
+            right: 17px;
+        }
+    }
+
+    .swiper1 {
+        .swiper-slide {
+            width: 335px;
+            min-height: 100px;
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    .main-advantages {
+        &__box {
+            padding: 130px 15px 30px;
+        }
+
+        &__arrow {
+            top: 30px;
+            right: 15px;
+        }
+    }
+
+    .main-platform {
+        &__item {
+            padding: 30px 15px;
+        }
+
+        &__banner {
+            padding: 30px 15px 280px;
+            background-size: 327px 160px;
+            background-position: center bottom;
+        }
+    }
+
+    .main-start {
+        &__container {
+            padding: 50px 15px;
+        }
+
+        &__step {
+            top: 25px;
+            right: 15px;
+        }
+
+        &__item {
+            &:nth-child(1) {
+                padding: 85px 15px 225px;
+                background-size: 215px 183px;
+                background-position: left 17px bottom;
+            }
+
+            &:nth-child(2) {
+                padding: 125px 15px 25px;
+            }
+
+            &:nth-child(3) {
+                padding: 125px 15px 25px;
+            }
+
+            &:nth-child(4) {
+                padding: 100px 15px 25px;
+            }
+        }
+
+        &__link {
+            right: 15px;
+            bottom: 25px;
+        }
+    }
+
+    .main-bonus {
+        &__container {
+            padding: 30px 15px 210px;
+            background: var(--blue-light) url(../images/main-bonus-mobile.svg) right bottom / 357px 100% no-repeat;
+
+            &::before {
+                width: 185px;
+                height: 114px;
+                right: 0;
+                bottom: 0;
+                background: url(../images/main-bonus-corner.svg) center / contain no-repeat;
+                transform: none;
+            }
+        }
+
+        &__link {
+            right: 0;
+        }
+    }
+
+    .main-banner {
+        h2 {
+            max-width: 100%;
+            font-size: 23px;
+            line-height: 26px;
+        }
+
+        p {
+            max-width: 255px;
+        }
+
+        &__image-2 {
+            background-image: image-set(url(../images/banner-2-mobile.avif), url(../images/banner-2-mobile.webp), url(../images/banner-2-mobile.png));
+        }
+    }
+
+    html {
+        &::before {
+            height: 280px;
+        }
     }
 }

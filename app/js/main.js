@@ -347,3 +347,16 @@ $(document).ready(function () {
 });
 
 // аккордеон (конец)
+
+let swiper9 = new Swiper(".swiper1", {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    speed: 5000,
+
+    autoplay: {
+        delay: 0,
+    },
+
+    loop: true,
+    allowTouchMove: false,
+});
