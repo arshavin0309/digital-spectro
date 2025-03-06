@@ -25,6 +25,10 @@
     section {
         margin-top: 80px;
         margin-bottom: 80px;
+
+        &:first-child {
+            padding-top: 120px;
+        }
     }
 
     h1 {
@@ -66,8 +70,6 @@
     }
 
     .main-hero {
-        margin-top: 120px;
-
         h1 {
             max-width: 300px;
         }
@@ -78,7 +80,7 @@
 
         &__list {
             margin-top: 110px;
-            padding: 355px 10px 10px;
+            padding: 355px 1px 20px;
 
             &::before {
                 top: -34px;
@@ -92,6 +94,9 @@
     }
 
     .swiper1 {
+        padding-left: 10px;
+        padding-right: 10px;
+
         .swiper-slide {
             width: 335px;
             min-height: 100px;
@@ -195,7 +200,7 @@
         }
     }
 
-    html {
+    body {
         &::before {
             height: 280px;
         }

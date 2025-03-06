@@ -348,7 +348,7 @@ $(document).ready(function () {
 
 // аккордеон (конец)
 
-let swiper9 = new Swiper(".swiper1", {
+let swiper1 = new Swiper(".swiper1", {
     slidesPerView: 'auto',
     spaceBetween: 20,
     speed: 5000,

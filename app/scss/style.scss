@@ -165,9 +165,14 @@ h3,
 }
 
 html {
+    overflow-x: clip;
+    overflow-y: visible;
+}
+
+body {
     min-width: 390px;
     background: var(--bg-blue-light);
-    overflow-x: hidden;
+    overflow-x: clip;
     overflow-y: visible;
 
     &::before {
@@ -193,12 +198,6 @@ html {
         background: url(../images/body-bg-top.svg) center / 100% 100% no-repeat;
         animation: animationLine-down 20s ease-in-out infinite;
     }
-}
-
-body {
-    min-width: 390px;
-    overflow-x: hidden;
-    overflow-y: visible;
 }
 
 .container {
@@ -277,8 +276,6 @@ body {
 }
 
 .main-hero {
-    margin-top: 275px;
-
     h1 {
         max-width: 860px;
     }
@@ -394,6 +391,11 @@ body {
 section {
     margin-top: 120px;
     margin-bottom: 120px;
+
+    &:first-child {
+        margin-top: 0;
+        padding-top: 275px;
+    }
 }
 
 .title {
@@ -877,6 +879,10 @@ section {
 
     &__info {
         text-align: right;
+
+        p {
+            color: var(--black);
+        }
     }
 
     .menu {
