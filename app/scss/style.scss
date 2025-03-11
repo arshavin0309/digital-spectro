@@ -217,8 +217,6 @@ body {
 
     &.scrolled {
         background: #f1f3f373;
-        //backdrop-filter: blur(5px);
-        //border-bottom: 1px solid var(--bg-blue-light);
         box-shadow: 0px 0px 21px -4px rgba(34, 60, 80, 0.22);
 
         .container {
@@ -239,8 +237,8 @@ body {
 
     &__logo {
         display: block;
-        width: 301px;
-        height: 68px;
+        width: 508px;
+        height: 67px;
         background: url(../images/header-logo.svg) center / contain no-repeat;
     }
 
@@ -286,13 +284,13 @@ body {
 
     &__box {
         display: grid;
-        grid-template-columns: 1fr 190px;
+        grid-template-columns: 1fr 377px;
         gap: 195px;
     }
 
     &__heading {
-        width: 190px;
-        height: 28px;
+        width: 377px;
+        height: 50px;
         background: url(../images/main-heading.svg) center / contain no-repeat;
         margin-top: auto;
     }
@@ -872,8 +870,8 @@ section {
     &__logo {
         display: block;
         margin-bottom: 10px;
-        width: 301px;
-        height: 68px;
+        width: 328px;
+        height: 46px;
         background: url(../images/footer-logo.svg) center / contain no-repeat;
     }
 
