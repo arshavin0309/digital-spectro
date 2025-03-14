@@ -7,6 +7,16 @@
                         color: var(--blue-activ);
                     }
                 }
+
+                &>.sub-menu {
+                    &>.menu-item {
+                        &>a {
+                            &:hover {
+                                color: var(--blue-activ);
+                            }
+                        }
+                    }
+                }
             }
         }
     }

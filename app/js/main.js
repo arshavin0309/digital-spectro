@@ -4,133 +4,139 @@
 
 let lang = document.documentElement.lang;
 let title;
+let url = document.location.href;
+let originUrl = document.location.origin + '/';
 
 if (!document.title) {
-    switch (document.location.pathname) {
-        case '/':
+    switch (true) {
+        case url == originUrl:
             title = lang == 'ru' ? 'Главная' : 'Main';
             document.title = title;
             break;
 
-        case '/start.html':
+        case url.includes('start'):
             title = lang == 'ru' ? 'С чего начать?' : 'Where to start?';
             document.title = title;
             break;
 
-        case '/404.html':
+        case url.includes('404'):
             title = lang == 'ru' ? 'Страница не найдена?' : 'Page not found';
             document.title = title;
             break;
 
-        case '/terms.html':
-        case '/terms-of-trade.html':
+        case url.includes('terms'):
             title = lang == 'ru' ? 'Условия торговли' : 'Trading terms';
             document.title = title;
             break;
 
-        case '/platform.html':
+        case url.includes('platform'):
             title = lang == 'ru' ? 'Торговая платформа' : 'Trading platform';
             document.title = title;
             break;
 
-        case '/strategies.html':
+        case url.includes('strategies'):
             title = lang == 'ru' ? 'Торговые стратегии' : 'Trading strategies';
             document.title = title;
             break;
 
-        case '/schedule.html':
+        case url.includes('schedule'):
             title = lang == 'ru' ? 'Часы работы рынка' : 'Market hours';
             document.title = title;
             break;
 
-        case '/instruments.html':
+        case url.includes('instruments'):
             title = lang == 'ru' ? 'Торговые инструменты' : 'Trading instruments';
             document.title = title;
             break;
 
-        case '/analytics.html':
+        case url.includes('analytics'):
             title = lang == 'ru' ? 'Аналитика рынка' : 'Market analytics';
             document.title = title;
             break;
 
-        case '/review.html':
-        case '/overview.html':
+        case url.includes('review'):
+        case url.includes('overview'):
             title = lang == 'ru' ? 'Обзор рынка' : 'Market overview';
             document.title = title;
             break;
 
-        case '/raw-materials.html':
-        case '/commodities.html':
+        case url.includes('raw-materials'):
+        case url.includes('commodities'):
             title = lang == 'ru' ? 'Сырье' : 'Сommodities';
             document.title = title;
             break;
 
-        case '/condition.html':
+        case url.includes('condition'):
             title = lang == 'ru' ? 'Состояние рынка' : 'State of the market';
             document.title = title;
             break;
 
-        case '/calendar.html':
+        case url.includes('calendar'):
             title = lang == 'ru' ? 'Экономический календарь' : 'Economic calendar';
             document.title = title;
             break;
 
-        case '/news.html':
+        case url.includes('news-page'):
+            title = $('h1').html();
+            document.title = title;
+            break;
+
+        case url.includes('news'):
             title = lang == 'ru' ? 'Новости рынка' : 'Market news';
             document.title = title;
             break;
 
-        case '/forecasts.html':
+        case url.includes('forecasts'):
             title = lang == 'ru' ? 'Прогнозы рынка' : 'Market forecasts';
             document.title = title;
             break;
 
-        case '/currencies.html':
+        case url.includes('currencies'):
             title = lang == 'ru' ? 'Валюты' : 'Currencies';
             document.title = title;
             break;
 
-        case '/cryptocurrencies.html':
+        case url.includes('cryptocurrencies'):
             title = lang == 'ru' ? 'Криптовалюты' : 'Cryptocurrencies';
             document.title = title;
             break;
 
-        case '/stocks.html':
+        case url.includes('stocks'):
             title = lang == 'ru' ? 'Акции' : 'Stocks';
             document.title = title;
             break;
 
-        case '/ies.html':
+        case url.includes('indices'):
             title = lang == 'ru' ? 'Индексы' : 'Indices';
             document.title = title;
             break;
 
-        case '/history.html':
+        case url.includes('history'):
             title = lang == 'ru' ? 'История компании' : 'Company history';
             document.title = title;
             break;
 
-        case '/why.html':
+        case url.includes('why'):
             title = lang == 'ru' ? 'Почему мы?' : 'Why us?';
             document.title = title;
             break;
 
-        case '/documents.html':
+        case url.includes('documents'):
             title = lang == 'ru' ? 'Документы' : 'Documents';
             document.title = title;
             break;
 
-        case '/about.html':
+        case url.includes('about'):
             title = lang == 'ru' ? 'О нас' : 'About us';
             document.title = title;
             break;
 
-        case '/contacts.html':
+        case url.includes('contacts'):
             title = lang == 'ru' ? 'Контакты' : 'Contacts';
             document.title = title;
             break;
 
-        case '/tips.html':
+        case url.includes('tips'):
             title = lang == 'ru' ? 'Торговые советы' : 'Trading tips';
             document.title = title;
             break;

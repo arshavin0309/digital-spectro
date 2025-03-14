@@ -171,6 +171,7 @@ html {
 
 body {
     min-width: 390px;
+    padding-top: 275px;
     background: var(--bg-blue-light);
     overflow-x: clip;
     overflow-y: visible;
@@ -261,6 +262,23 @@ body {
             &>a {
                 color: var(--black);
                 text-decoration: none;
+            }
+
+            &>.sub-menu {
+                display: grid;
+                gap: 10px;
+                padding: 15px 10px;
+                background: var(--white);
+                box-shadow: 0px 0px 4px 0px #0000001A;
+                border-radius: 10px;
+                list-style: none;
+
+                &>.menu-item {
+                    &>a {
+                        color: var(--black);
+                        text-decoration: none;
+                    }
+                }
             }
         }
     }
@@ -392,7 +410,6 @@ section {
 
     &:first-child {
         margin-top: 0;
-        padding-top: 275px;
     }
 }
 
