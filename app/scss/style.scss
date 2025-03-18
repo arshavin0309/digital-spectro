@@ -147,6 +147,7 @@ h3,
 
 .btn {
     display: inline-block;
+    margin-top: 35px;
     padding: 10px 20px;
     font-size: 18px;
     line-height: 24px;
@@ -157,6 +158,7 @@ h3,
     text-decoration: none;
     border: none;
     cursor: pointer;
+    white-space: nowrap;
 
     &--white {
         color: var(--black);
@@ -197,7 +199,7 @@ body {
         width: 100%;
         height: 940px;
         background: url(../images/body-bg-top.svg) center / 100% 100% no-repeat;
-        animation: animationLine-down 20s ease-in-out infinite;
+        //animation: animationLine-down 20s ease-in-out infinite;
     }
 }
 
@@ -252,42 +254,15 @@ body {
         background: var(--white);
     }
 
-    .menu {
-        display: flex;
-        gap: 90px;
-        align-items: center;
-        list-style: none;
-
-        &>.menu-item {
-            &>a {
-                color: var(--black);
-                text-decoration: none;
-            }
-
-            &>.sub-menu {
-                display: grid;
-                gap: 10px;
-                padding: 15px 10px;
-                background: var(--white);
-                box-shadow: 0px 0px 4px 0px #0000001A;
-                border-radius: 10px;
-                list-style: none;
-
-                &>.menu-item {
-                    &>a {
-                        color: var(--black);
-                        text-decoration: none;
-                    }
-                }
-            }
-        }
-    }
-
     &__burger {
         display: none;
         width: 26px;
         height: 20px;
         background: url(../images/burger.svg) center / contain no-repeat;
+    }
+
+    .btn {
+        margin: 0;
     }
 }
 
@@ -788,6 +763,7 @@ section {
 
     .btn {
         width: 100%;
+        margin: 0;
     }
 
     &__image-1 {
@@ -824,7 +800,7 @@ section {
         width: 100%;
         height: 770px;
         background: url(../images/footer-bg.svg) center / 100% 100% no-repeat;
-        animation: animationLine-up 20s ease-in-out infinite;
+        //animation: animationLine-up 20s ease-in-out infinite;
     }
 
     .container {
@@ -914,6 +890,133 @@ section {
                 text-decoration: none;
             }
         }
+    }
+}
+
+.crumbs {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+
+    div,
+    a {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 300;
+        color: var(--grey-text);
+        text-decoration: none;
+    }
+
+    &>* {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        &:not(:last-child) {
+            &::after {
+                content: '/';
+                display: block;
+            }
+        }
+    }
+}
+
+.terms-hero {
+    .container {
+        display: grid;
+        grid-template-columns: 840px;
+        justify-items: start;
+    }
+}
+
+.terms-tariff {
+    .heading {
+        grid-template-columns: 1fr 475px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 70px;
+        padding: 50px 25px;
+        border-radius: 20px;
+        background: var(--white);
+        overflow: clip;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(11.43deg, #FFFFFF 22.92%, #DAE6F3 91.59%);
+        }
+
+        &.popular {
+            background: var(--blue-dark);
+            color: var(--white);
+
+            &::before {
+                display: none;
+            }
+
+            h3 {
+                color: var(--white);
+            }
+
+            .h2 {
+                color: var(--white);
+            }
+        }
+
+        h3 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            margin-bottom: 25px;
+
+            span {
+                padding: 5px 15px;
+                font-size: 16px;
+                line-height: 18px;
+                font-weight: 400;
+                color: var(--white);
+                border: 1px solid var(--white);
+                border-radius: 30px;
+            }
+        }
+
+        .h2 {
+            margin-bottom: 5px;
+            color: var(--blue-dark);
+            font-size: 52px;
+            line-height: 56px;
+            font-weight: 500;
+        }
+
+        ul {
+            margin-top: 25px;
+            list-style: none;
+        }
+
+        .btn {
+            position: relative;
+            text-align: center;
+        }
+    }
+
+    &__content {
+        position: relative;
     }
 }
 

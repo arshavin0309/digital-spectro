@@ -269,6 +269,16 @@ if ($(window).width() <= 1200) {
             }
         })
     }
+} else {
+    subMenu.slideUp();
+
+    menuItem.on('mouseenter', function() {
+        $(this).addClass("active").find(subMenu).slideDown();
+    })
+
+    menuItem.on('mouseleave', function() {
+        $(this).removeClass("active").find(subMenu).slideUp();
+    })
 }
 
 // мобильное меню (конец)

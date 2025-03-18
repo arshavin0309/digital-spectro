@@ -25,10 +25,6 @@
     section {
         margin-top: 80px;
         margin-bottom: 80px;
-
-        &:first-child {
-            padding-top: 120px;
-        }
     }
 
     h1 {
@@ -201,6 +197,8 @@
     }
 
     body {
+        padding-top: 120px;
+
         &::before {
             height: 280px;
         }

@@ -8,7 +8,6 @@
 
         &.active {
             background: var(--blue-light);
-            //backdrop-filter: initial;
         }
 
         &__logo {
@@ -54,6 +53,22 @@
                     padding: 20px 30px;
                     font-size: 20px;
                     border-bottom: 1px solid var(--grey-text);
+                    text-decoration: none;
+                    color: var(--black);
+                }
+
+                &>.sub-menu {
+                    transition: none;
+
+                    &>.menu-item {
+                        &>a {
+                            display: block;
+                            width: 100%;
+                            padding: 20px 50px;
+                            color: var(--black);
+                            text-decoration: none;
+                        }
+                    }
                 }
             }
         }
@@ -62,10 +77,6 @@
     section {
         margin-top: 100px;
         margin-bottom: 100px;
-
-        &:nth-child(1) {
-            padding-top: 160px;
-        }
     }
 
     h1 {
@@ -196,6 +207,8 @@
     }
 
     body {
+        padding-top: 160px;
+
         &::after {
             min-width: 390px;
             background-size: cover;
