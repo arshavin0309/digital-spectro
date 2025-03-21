@@ -226,59 +226,76 @@ document.querySelector('.cookies .btn').addEventListener('click', () => {
 
 // мобильное меню (начало)
 
-let menuItem = $('.header .menu > .menu-item');
-let subMenu = $('.header .menu > .menu-item .sub-menu');
-let burger = $('.header__burger'); // кнопка открытия мобильного меню
-let headerMenu = $('.header .menu'); // меню хедера
-let headerBox = $('.header'); // блок внутри контейнера хедера, например если он в виде острова и при выпадении мобильного меню, нужно его дополнительно стилизовать
+navMenu();
+$(window).on('resize', function () {
+    navMenu();
+    console.log('resize')
+});
 
-if ($(window).width() <= 1200) {
+function navMenu() {
+    let menuItem = $('.header .menu > .menu-item');
+    let subMenu = $('.header .menu > .menu-item .sub-menu');
+    let burger = $('.header__burger'); // кнопка открытия мобильного меню
+    let headerMenu = $('.header .menu'); // меню хедера
+    let headerBox = $('.header'); // блок внутри контейнера хедера, например если он в виде острова и при выпадении мобильного меню, нужно его дополнительно стилизовать
 
-    burger.on('click', function () {
-        burger.toggleClass('active');
-        headerBox.toggleClass('active');
-        headerMenu.toggleClass('active');
-
+    if ($(window).width() <= 1200) {
         subMenu.slideUp();
-        menuItem.removeClass('active');
-    })
 
-    $('.upButton').on('click', function () {
-        burger.removeClass('active');
-        headerBox.removeClass('active');
-        headerMenu.removeClass('active');
+        burger.on('click', function () {
+            burger.toggleClass('active');
+            headerBox.toggleClass('active');
+            headerMenu.toggleClass('active');
 
-        subMenu.slideUp();
-        menuItem.removeClass('active');
-    });
-
-    for (let i = 0; i < menuItem.length; i++) {
-        menuItem.eq(i).on('click', function () {
-
-            if (menuItem.eq(i).hasClass('active')) {
-
-                menuItem.eq(i).removeClass('active');
-                subMenu.eq(i).slideUp();
-
-            } else {
-                subMenu.slideUp();
-                menuItem.removeClass('active');
-
-                subMenu.eq(i).slideDown();
-                menuItem.eq(i).addClass('active');
-            }
+            subMenu.slideUp();
+            menuItem.removeClass('active');
         })
+
+        $('.upButton').on('click', function () {
+            burger.removeClass('active');
+            headerBox.removeClass('active');
+            headerMenu.removeClass('active');
+
+            subMenu.slideUp();
+            menuItem.removeClass('active');
+        });
+
+        for (let i = 0; i < menuItem.length; i++) {
+            menuItem.eq(i).on('click', function () {
+
+                if (menuItem.eq(i).hasClass('active')) {
+
+                    menuItem.eq(i).removeClass('active');
+                    subMenu.eq(i).slideUp();
+
+                } else {
+                    subMenu.slideUp();
+                    menuItem.removeClass('active');
+
+                    subMenu.eq(i).slideDown();
+                    menuItem.eq(i).addClass('active');
+                }
+            })
+        }
+    } else {
+        subMenu.slideUp();
+
+        menuItem.hover(function() {
+            subMenu.slideDown;
+            console.log('hover')
+        })
+
+        // when you hover a toggle show its dropdown menu
+        // $(".menu > .menu-item").hover(function () {
+        //     $(this).parent().toggleClass("show");
+        //     $(this).parent().find(".sub-menu").toggleClass("show");
+        // });
+
+        // hide the menu when the mouse leaves the dropdown
+        // $(".sub-menu").mouseleave(function () {
+        //     $(this).removeClass("show");
+        // });
     }
-} else {
-    subMenu.slideUp();
-
-    menuItem.on('mouseenter', function() {
-        $(this).addClass("active").find(subMenu).slideDown();
-    })
-
-    menuItem.on('mouseleave', function() {
-        $(this).removeClass("active").find(subMenu).slideUp();
-    })
 }
 
 // мобильное меню (конец)

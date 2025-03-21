@@ -173,7 +173,7 @@ html {
 
 body {
     min-width: 390px;
-    padding-top: 275px;
+    padding-top: 215px;
     background: var(--bg-blue-light);
     overflow-x: clip;
     overflow-y: visible;
@@ -199,7 +199,7 @@ body {
         width: 100%;
         height: 940px;
         background: url(../images/body-bg-top.svg) center / 100% 100% no-repeat;
-        //animation: animationLine-down 20s ease-in-out infinite;
+        animation: animationLine-down 20s ease-in-out infinite;
     }
 }
 
@@ -385,6 +385,10 @@ section {
 
     &:first-child {
         margin-top: 0;
+    }
+
+    &.main-hero {
+        margin-top: 60px;
     }
 }
 
@@ -726,7 +730,7 @@ section {
     }
 }
 
-.main-banner {
+.banner-1 {
     &__container {
         display: grid;
         grid-template-columns: 345px 1fr;
@@ -800,7 +804,7 @@ section {
         width: 100%;
         height: 770px;
         background: url(../images/footer-bg.svg) center / 100% 100% no-repeat;
-        //animation: animationLine-up 20s ease-in-out infinite;
+        animation: animationLine-up 20s ease-in-out infinite;
     }
 
     .container {
@@ -955,10 +959,12 @@ section {
         &::before {
             content: '';
             position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
+            inset: -50%;
+            width: 200%;
+            height: 200%;
             background: linear-gradient(11.43deg, #FFFFFF 22.92%, #DAE6F3 91.59%);
+            background-size: 200% 200%;
+            animation: gradient 3s ease-in-out infinite;
         }
 
         &.popular {
@@ -1017,6 +1023,85 @@ section {
 
     &__content {
         position: relative;
+    }
+}
+
+.terms-benefits {
+    &__list {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: start;
+        padding: 30px 20px 30px 15px;
+        border-radius: 20px;
+        background: var(--white);
+
+        &:nth-child(1),
+        &:nth-child(4),
+        &:nth-child(6) {
+            background: var(--blue-light);
+        }
+    }
+
+    &__image {
+        background: image-set(url(../images/terms-benefits-7.avif), url(../images/terms-benefits-7.webp), url(../images/terms-benefits-7.png)) center / cover no-repeat;
+        border-radius: 20px;
+    }
+}
+
+.banner-2 {
+    &__container {
+        display: grid;
+        grid-template-columns: 470px 1fr;
+        gap: 20px;
+        padding: 50px 20px;
+        border-radius: 20px;
+        background: var(--blue-dark);
+    }
+
+    h2 {
+        color: var(--white);
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 490px;
+        text-align: center;
+    }
+}
+
+.platform-advantages {
+    .heading {
+        p {
+            padding-right: 70px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    &__item {
+        padding: 30px 15px;
+        border-radius: 20px;
+        background: var(--white);
+
+        &:nth-child(1),
+        &:nth-child(4) {
+            background: var(--blue-light);
+        }
+    }
+
+    img {
+        margin-bottom: 25px;
     }
 }
 
