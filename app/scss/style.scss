@@ -228,6 +228,22 @@ body {
         }
     }
 
+    .menu {
+        .sub-menu {
+            position: relative;
+            transition: none;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 50px;
+                top: -40px;
+                transition: none;
+            }
+        }
+    }
+
     .container {
         padding-top: 45px;
         padding-bottom: 45px;
@@ -963,8 +979,6 @@ section {
             width: 200%;
             height: 200%;
             background: linear-gradient(11.43deg, #FFFFFF 22.92%, #DAE6F3 91.59%);
-            background-size: 200% 200%;
-            animation: gradient 3s ease-in-out infinite;
         }
 
         &.popular {

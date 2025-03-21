@@ -239,8 +239,9 @@ function navMenu() {
     let headerMenu = $('.header .menu'); // меню хедера
     let headerBox = $('.header'); // блок внутри контейнера хедера, например если он в виде острова и при выпадении мобильного меню, нужно его дополнительно стилизовать
 
+    subMenu.slideUp();
+
     if ($(window).width() <= 1200) {
-        subMenu.slideUp();
 
         burger.on('click', function () {
             burger.toggleClass('active');
@@ -262,39 +263,24 @@ function navMenu() {
 
         for (let i = 0; i < menuItem.length; i++) {
             menuItem.eq(i).on('click', function () {
-
                 if (menuItem.eq(i).hasClass('active')) {
-
                     menuItem.eq(i).removeClass('active');
                     subMenu.eq(i).slideUp();
-
                 } else {
                     subMenu.slideUp();
                     menuItem.removeClass('active');
-
                     subMenu.eq(i).slideDown();
                     menuItem.eq(i).addClass('active');
                 }
             })
         }
     } else {
-        subMenu.slideUp();
-
-        menuItem.hover(function() {
-            subMenu.slideDown;
-            console.log('hover')
-        })
-
-        // when you hover a toggle show its dropdown menu
-        // $(".menu > .menu-item").hover(function () {
-        //     $(this).parent().toggleClass("show");
-        //     $(this).parent().find(".sub-menu").toggleClass("show");
-        // });
-
-        // hide the menu when the mouse leaves the dropdown
-        // $(".sub-menu").mouseleave(function () {
-        //     $(this).removeClass("show");
-        // });
+        for (let i = 0; i < menuItem.length; i++) {
+            menuItem.eq(i).on('mouseenter', function () {
+                subMenu.eq(i).slideDown();
+                menuItem.eq(i).addClass('active');
+            })
+        }
     }
 }
 
