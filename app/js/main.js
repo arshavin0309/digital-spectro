@@ -383,3 +383,17 @@ let swiper1 = new Swiper(".swiper1", {
     loop: true,
     allowTouchMove: false,
 });
+
+let swiper2 = new Swiper(".swiper2", {
+    freeMode: true,
+    watchSlidesProgress: true,
+    slidesPerView: 5,
+    spaceBetween: 0,
+});
+
+let swiper3 = new Swiper(".swiper3", {
+    spaceBetween: 30,
+    thumbs: {
+        swiper: swiper2,
+    },
+});
