@@ -1,11 +1,77 @@
 <!--=include header.html -->
 
 <main>
-    <section>
+    <section class="overview-hero">
         <div class="container">
+            <div class="crumbs">
+                <a href="/">Main</a>
+                <div>Analytics</div>
+                <div>Market overview</div>
+            </div>
 
+            <h1>Market overview</h1>
+
+            <p class="textm">Track asset movements in real time and make informed trading decisions based on the latest market data</p>
+
+            <a href="##" class="btn">Start investing</a>
         </div>
     </section>
+
+    <section class="overview-charts">
+        <div class="container">
+            <div class="overview-charts__container">
+                <div class="overview-charts__box">
+                    <h2>Online charts</h2>
+                    <p class="textm">Take advantage of the most important trader's tool — perform technical analysis on charts of financial assets online</p>
+                </div>
+
+                <div class="widget-box">
+                    <script src="https://api.marketcheese.com/widgets/chart/widget.js" data-config='{"timeframe":"H1","barStyle":"Candle","offset":30,"colorScheme":"light","language":"en","symbolsEnabled":true,"showTools":true,"terminalBtnVisible":false,"symbol":"EURUSD"}'></script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="overview-condition">
+        <div class="container">
+            <div class="overview-condition__container">
+                <div class="overview-condition__box">
+                    <h2>Market condition</h2>
+                    <p class="textm">Up-to-date data on financial instruments on the market. Real-time price tracking and analysis of market dynamics for different time periods</p>
+                </div>
+
+                <div class="widget-box">
+                    <script src="https://api.marketcheese.com/widgets/markets/widget.js" data-config='{"language":"en","orientation":"auto","defaultPeriod":"week","adaptive":true,"groups":[{"name":"Символы","symbols":"97,98,100,127,48,57,68,87,12,18,201,225,14"}]}'></script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="overview-events">
+        <div class="container">
+            <div class="overview-events__container">
+                <div class="overview-events__events">
+                    <h2>Important events</h2>
+                    <p class="textm">Be the first to know about major world economic events and market reactions in real time</p>
+
+                    <div class="widget-box">
+                        <script src="https://api.marketcheese.com/widgets/notifier/widget.js" data-config='{"language":"en","period":"all","multipleIndicators":true,"adaptive":true,"currencies":"1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19"}'></script>
+                    </div>
+                </div>
+
+                <div class="overview-events__leaders">
+                    <h2>Market leaders</h2>
+                    <p class="textm">Benefit from efficient classification of assets into top performers and underperformers to facilitate quick trading decisions</p>
+
+                    <div class="widget-box">
+                        <script src="https://api.marketcheese.com/widgets/leaders/widget.js" data-config='{"filters":{"segments":"14,4,16,8,5,7,15"},"language":"en"}'></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--=include banner-2.html -->
 </main>
 
 <!--=include footer.html -->
