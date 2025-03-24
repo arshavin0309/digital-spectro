@@ -229,7 +229,6 @@ document.querySelector('.cookies .btn').addEventListener('click', () => {
 navMenu();
 $(window).on('resize', function () {
     navMenu();
-    console.log('resize')
 });
 
 function navMenu() {
@@ -239,7 +238,11 @@ function navMenu() {
     let headerMenu = $('.header .menu'); // меню хедера
     let headerBox = $('.header'); // блок внутри контейнера хедера, например если он в виде острова и при выпадении мобильного меню, нужно его дополнительно стилизовать
 
-    subMenu.slideUp();
+    menuItem.removeClass('active');
+    subMenu.removeClass('active').slideUp();
+    burger.removeClass('active');
+    headerMenu.removeClass('active');
+    headerBox.removeClass('active');
 
     if ($(window).width() <= 1200) {
 
@@ -261,24 +264,44 @@ function navMenu() {
             menuItem.removeClass('active');
         });
 
-        for (let i = 0; i < menuItem.length; i++) {
-            menuItem.eq(i).on('click', function () {
-                if (menuItem.eq(i).hasClass('active')) {
-                    menuItem.eq(i).removeClass('active');
-                    subMenu.eq(i).slideUp();
+        for (let click = 0; click < menuItem.length; click++) {
+            menuItem.eq(click).on('click', function () {
+                if (menuItem.eq(click).hasClass('active')) {
+                    menuItem.eq(click).removeClass('active');
+                    subMenu.eq(click).slideUp();
                 } else {
-                    subMenu.slideUp();
-                    menuItem.removeClass('active');
-                    subMenu.eq(i).slideDown();
-                    menuItem.eq(i).addClass('active');
+                    for (let other = 0; other < menuItem.length; other++) {
+                        if (menuItem.eq(other) != menuItem.eq(click)) {
+                            subMenu.eq(other).slideUp();
+                            menuItem.removeClass('active');
+                        }
+                    }
+
+                    subMenu.eq(click).slideDown();
+                    menuItem.eq(click).addClass('active');
                 }
             })
         }
     } else {
-        for (let i = 0; i < menuItem.length; i++) {
-            menuItem.eq(i).on('mouseenter', function () {
-                subMenu.eq(i).slideDown();
-                menuItem.eq(i).addClass('active');
+        for (let hover = 0; hover < menuItem.length; hover++) {
+            menuItem.eq(hover).on('mouseenter', function () {
+
+                if (!menuItem.eq(hover).hasClass('active')) {
+                    for (let other = 0; other < menuItem.length; other++) {
+                        if (menuItem.eq(other) != menuItem.eq(hover)) {
+                            subMenu.eq(other).slideUp();
+                            menuItem.eq(other).removeClass('active');
+                        }
+                    }
+
+                    subMenu.eq(hover).slideDown();
+                    menuItem.eq(hover).addClass('active');
+                }
+            })
+
+            subMenu.eq(hover).on('mouseleave', function () {
+                subMenu.eq(hover).slideUp();
+                menuItem.eq(hover).removeClass('active');
             })
         }
     }
@@ -328,25 +351,6 @@ tableShow.on('click', showTr);
 tableHide.on('click', hideTr);
 
 // табы для таблиц (конец)
-
-// плавная прокрутка до якоря (начало)
-
-const anchors = document.querySelectorAll('a[href*="#"]')
-
-for (let anchor of anchors) {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault()
-
-        const blockID = anchor.getAttribute('href').substr(1)
-
-        document.getElementById(blockID).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        })
-    })
-}
-
-// плавная прокрутка до якоря (конец)
 
 // аккордеон (начало)
 
