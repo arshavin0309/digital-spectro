@@ -1431,6 +1431,12 @@ section>.container>.title {
     }
 }
 
+.calendar-hero {
+    p {
+        max-width: 1055px;
+    }
+}
+
 @import '../scss/hovers';
 @import '../scss/1800';
 @import '../scss/1700';
