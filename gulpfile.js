@@ -122,7 +122,8 @@ function building() {
         // '!app/images/*.svg',
         // 'app/images/sprite.svg',
         'app/js/main.min.js',
-        'app/**/*.html',
+        // 'app/**/*.html',
+        'app/*.html',
         'app/upload/**/*'
     ], { base: 'app' })
         .pipe(dest('dist'))
