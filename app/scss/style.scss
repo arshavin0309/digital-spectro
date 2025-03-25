@@ -232,7 +232,12 @@ body {
     .menu {
         .sub-menu {
             position: relative;
-            transition: none;
+            transition: .3s ease-in-out opacity;
+            opacity: 0;
+
+            &.active {
+                opacity: 1;
+            }
 
             &::before {
                 content: '';

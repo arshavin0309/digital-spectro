@@ -249,7 +249,7 @@ function navMenu() {
             headerBox.toggleClass('active');
             headerMenu.toggleClass('active');
 
-            subMenu.slideUp();
+            subMenu.removeClass('active').slideUp();
             menuItem.removeClass('active');
         })
 
@@ -258,7 +258,7 @@ function navMenu() {
             headerBox.removeClass('active');
             headerMenu.removeClass('active');
 
-            subMenu.slideUp();
+            subMenu.removeClass('active').slideUp();
             menuItem.removeClass('active');
         });
 
@@ -266,16 +266,16 @@ function navMenu() {
             menuItem.eq(click).on('click', function () {
                 if (menuItem.eq(click).hasClass('active')) {
                     menuItem.eq(click).removeClass('active');
-                    subMenu.eq(click).slideUp();
+                    subMenu.eq(click).removeClass('active').slideUp();
                 } else {
                     for (let other = 0; other < menuItem.length; other++) {
                         if (menuItem.eq(other) != menuItem.eq(click)) {
-                            subMenu.eq(other).slideUp();
+                            subMenu.eq(other).removeClass('active').slideUp();
                             menuItem.removeClass('active');
                         }
                     }
 
-                    subMenu.eq(click).slideDown();
+                    subMenu.eq(click).addClass('active').slideDown();
                     menuItem.eq(click).addClass('active');
                 }
             })
@@ -287,18 +287,18 @@ function navMenu() {
                 if (!menuItem.eq(hover).hasClass('active')) {
                     for (let other = 0; other < menuItem.length; other++) {
                         if (menuItem.eq(other) != menuItem.eq(hover)) {
-                            subMenu.eq(other).slideUp();
+                            subMenu.eq(other).removeClass('active').slideUp();
                             menuItem.eq(other).removeClass('active');
                         }
                     }
 
-                    subMenu.eq(hover).slideDown();
+                    subMenu.eq(hover).addClass('active').slideDown();
                     menuItem.eq(hover).addClass('active');
                 }
             })
 
             subMenu.eq(hover).on('mouseleave', function () {
-                subMenu.eq(hover).slideUp();
+                subMenu.eq(hover).removeClass('active').slideUp();
                 menuItem.eq(hover).removeClass('active');
             })
         }
