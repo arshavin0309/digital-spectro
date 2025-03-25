@@ -238,4 +238,30 @@
             }
         }
     }
+
+    .contacts-info {
+        a {
+            &:hover {
+                color: var(--blue-activ);
+            }
+        }
+
+        label[for=checkbox] {
+            span {
+                a {
+                    &:hover {
+                        color: var(--blue-activ);
+                    }
+                }
+            }
+        }
+    }
+
+    .crumbs {
+        a {
+            &:hover {
+                color: var(--blue-activ);
+            }
+        }
+    }
 }

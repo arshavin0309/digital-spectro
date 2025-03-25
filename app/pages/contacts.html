@@ -20,32 +20,47 @@
     <section class="contacts-info">
         <div class="container">
             <div class="contacts-info__container">
-                <div class="contacts-info__contacts"></div>
+                <div class="contacts-info__contacts">
+                    <!-- <a href="tel:+358 17 54926" class="contacts-info__item contacts-info__tel">+358 17 54926</a> -->
+
+                    <a href="mailto:info@digitalspectro.com" class="contacts-info__item contacts-info__mail">info@digitalspectro.com</a>
+
+                    <!-- <address class="contacts-info__item contacts-info__address">78 Coleman Grove, Mandyston, Canterbury, 3237</address> -->
+                </div>
 
                 <form action="">
                     <div class="contacts-info__input">
-                        <p class="textm">Name</p>
+                        <p class="texts">Name</p>
                         <p><input type="text"></p>
                     </div>
 
                     <div class="contacts-info__input">
-                        <p class="textm">Email</p>
+                        <p class="texts">Email</p>
                         <p><input type="email"></p>
                     </div>
 
                     <div class="contacts-info__input">
-                        <p class="textm">Message</p>
+                        <p class="texts">Message</p>
                         <p><textarea name="" id=""></textarea></p>
                     </div>
-                    
 
+                    <p>
+                        <label for="checkbox">
+                            <input type="checkbox" name="checkbox" value="1" id="checkbox" wfd-id="id2">
+                            <span class="texts">I agree to the <a href="##">Privacy Policy</a></span>
+                        </label>
+                    </p>
 
                     <div class="contacts-info__submit">
                         <input class="btn" type="submit" value="Send">
                     </div>
                 </form>
 
-                <picture></picture>
+                <picture>
+                    <source srcset="images/contacts-info-image.avif">
+                    <source srcset="images/contacts-info-image.webp">
+                    <img src="images/contacts-info-image.png" alt="">
+                </picture>
             </div>
         </div>
     </section>

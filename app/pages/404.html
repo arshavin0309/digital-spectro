@@ -3,12 +3,22 @@
 <main>
     <section class="error-hero">
         <div class="container">
-            <h1>Error 404</h1>
-            <p>This page does not exist. Please go to the home page</p>
+            <div class="error-hero__box">
+                <h1>Page not found</h1>
+                <p class="textm">This page does not exist. Please go to the main page</p>
+    
+                <a href="/" class="btn">Home</a>
+            </div>
 
-            <a href="/" class="btn">Home page</a>
+            <picture>
+                <source srcset="images/error-image.avif">
+                <source srcset="images/error-image.webp">
+                <img src="images/error-image.png" alt="">
+            </picture>
         </div>
     </section>
+    
+    <!--=include banner-1.html -->
 </main>
 
 <!--=include footer.html -->
