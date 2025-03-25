@@ -59,7 +59,8 @@ h1 {
     }
 }
 
-h2 {
+h2,
+.h2 {
     margin-bottom: 50px;
     font-size: 52px;
     line-height: 56px;
@@ -996,32 +997,21 @@ section>.container>.title {
     }
 
     &__item {
-        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         gap: 70px;
         padding: 50px 25px;
         border-radius: 20px;
-        background: var(--white);
+        background: linear-gradient(11.43deg, #FFFFFF 22.92%, #DAE6F3 91.59%);
+        background-size: 400%;
         overflow: clip;
-
-        &::before {
-            content: '';
-            position: absolute;
-            inset: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(11.43deg, #FFFFFF 22.92%, #DAE6F3 91.59%);
-        }
+        animation: gradient2 10s infinite linear;
 
         &.popular {
-            background: var(--blue-dark);
+            background: var(--blue-dark) url(../images/mobile-trader-decor.svg) center / contain no-repeat;
             color: var(--white);
-
-            &::before {
-                display: none;
-            }
+            animation: background-size 10s infinite linear;
 
             h3 {
                 color: var(--white);
@@ -1029,6 +1019,16 @@ section>.container>.title {
 
             .h2 {
                 color: var(--white);
+            }
+
+            ul {
+                li {
+                    color: var(--white);
+
+                    &::before {
+                        background-image: url(../images/marker-white.svg);
+                    }
+                }
             }
         }
 
@@ -1059,12 +1059,31 @@ section>.container>.title {
         }
 
         ul {
+            display: grid;
+            gap: 10px;
             margin-top: 25px;
             list-style: none;
+
+            li {
+                display: grid;
+                grid-template-columns: 10px 1fr;
+                gap: 10px;
+                align-items: start;
+                color: var(--black);
+
+                &::before {
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    margin-top: 4px;
+                    background: url(../images/marker.svg) center / contain no-repeat;
+                }
+            }
         }
 
         .btn {
             position: relative;
+            margin: 0;
             text-align: center;
         }
     }
@@ -1631,6 +1650,10 @@ section>.container>.title {
         }
     }
 
+    h2 {
+        position: relative;
+    }
+
     &__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -1640,6 +1663,8 @@ section>.container>.title {
     }
 
     &__item {
+        position: relative;
+
         h2 {
             margin-bottom: 10px;
             color: var(--blue-activ)
@@ -1836,7 +1861,7 @@ section>.container>.title {
         display: grid;
         grid-template-columns: 575px 1fr;
         column-gap: 160px;
-        row-gap: 70px;
+        row-gap: 30px;
         padding: 50px 30px;
         border-radius: 20px;
         background: var(--white);
@@ -1892,11 +1917,6 @@ section>.container>.title {
         }
     }
 
-    form {
-        grid-column: 1;
-        grid-row: 1/3;
-    }
-
     &__input {
         margin-bottom: 20px;
 
@@ -1946,11 +1966,14 @@ section>.container>.title {
         padding: 5px 40px 0 0;
         display: block;
         grid-column: 2;
-        grid-row: 1;
+        grid-row: 1/3;
 
         img {
             display: block;
-            margin: 0 0 auto auto;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            object-fit: contain;
         }
     }
 }

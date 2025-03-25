@@ -92,6 +92,34 @@
     }
 }
 
+@keyframes gradient2 {
+    0% {
+        background-position: 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}
+
+@keyframes background-size {
+    0% {
+        background-size: 150%;
+    }
+
+    50% {
+        background-size: 200%;
+    }
+
+    100% {
+        background-size: 150%;
+    }
+}
+
 @keyframes left-right {
     0% {
         transform: translateX(0);
