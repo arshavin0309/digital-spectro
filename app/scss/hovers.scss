@@ -217,4 +217,25 @@
             }
         }
     }
+
+    .documents-documents {
+        &__item {
+            &:hover {
+                background: var(--blue-dark);
+
+                h3 {
+                    color: var(--white);
+                }
+
+                .btn {
+                    background: var(--white);
+                    color: var(--black);
+                }
+
+                &::after {
+                    background: var(--blue-dark) url(../images/pdf-white.svg) center / 24px no-repeat;
+                }
+            }
+        }
+    }
 }
