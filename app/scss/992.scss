@@ -35,4 +35,69 @@
             align-items: center;
         }
     }
+
+    .calendar-contains {
+        &__container {
+            padding: 40px 30px;
+            background-image: image-set(url(../images/calendar-contains-image-tablet.avif), url(../images/calendar-contains-image-tablet.webp), url(../images/calendar-contains-image-tablet.png));
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        &__list {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .calendar-use {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+
+        &__item {
+            &:nth-child(1) {
+                p {
+                    max-width: 525px;
+                }
+            }
+
+            &:nth-child(2) {
+                p {
+                    max-width: 400px;
+                }
+            }
+
+            &:nth-child(3) {
+                p {
+                    max-width: 380px;
+                }
+
+                .calendar-use__step {
+                    &::before {
+                        display: block;
+                    }
+                }
+            }
+
+            &:nth-child(4) {
+                p {
+                    max-width: 410px;
+                }
+            }
+
+            &:nth-child(5) {
+                p {
+                    max-width: 430px;
+                }
+            }
+
+            &:nth-child(6) {
+                p {
+                    max-width: 525px;
+                }
+            }
+        }
+    }
 }

@@ -30,4 +30,10 @@
             gap: 10px;
         }
     }
+
+    .calendar-use {
+        &__list {
+            column-gap: 50px;
+        }
+    }
 }
