@@ -13,4 +13,26 @@
             padding: 140px 25px 50px;
         }
     }
+
+    .banner-3 {
+        &__container {
+            padding: 50px 20px 20px;
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 52px;
+            line-height: 56px;
+        }
+
+        p {
+            max-width: 665px;
+            margin: auto;
+        }
+
+        &__box {
+            align-items: center;
+        }
+    }
 }

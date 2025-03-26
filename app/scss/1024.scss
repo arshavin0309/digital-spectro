@@ -1,3 +1,33 @@
 @media (max-width: 1024px) {
-    
+    .platform-platform {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+
+        &__item {
+            p {
+                max-width: 550px;
+            }
+
+            &.custom {
+                grid-row: initial;
+                grid-column: initial;
+
+                .btn {
+                    max-width: 445px;
+                }
+
+                &::after {
+                    background-size: 490px 471px;
+                }
+            }
+        }
+    }
+
+    .swiper3 {
+        &__list {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+    }
 }

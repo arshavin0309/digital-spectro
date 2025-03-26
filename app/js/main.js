@@ -10,6 +10,8 @@ let originUrl = document.location.origin + '/';
 if (!document.title) {
     switch (true) {
         case url == originUrl:
+        case url == originUrl + '#':
+        case url == originUrl + '##':
             title = lang == 'ru' ? 'Главная' : 'Main';
             document.title = title;
             break;
@@ -385,8 +387,14 @@ let swiper1 = new Swiper(".swiper1", {
 let swiper2 = new Swiper(".swiper2", {
     freeMode: true,
     watchSlidesProgress: true,
-    slidesPerView: 5,
+    slidesPerView: 'auto',
     spaceBetween: 0,
+
+    breakpoints: {
+        1200: {
+            slidesPerView: 5,
+        }
+    }
 });
 
 let swiper3 = new Swiper(".swiper3", {

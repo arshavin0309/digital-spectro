@@ -15,11 +15,86 @@
         }
 
         &__banner {
+            position: relative;
             padding: 50px 25px 320px;
             grid-row: initial;
             grid-column: initial;
             background-size: 445px 220px;
             background-position: center bottom 30px;
+        }
+
+        .btn {
+            position: absolute;
+            inset: auto 25px 50px;
+        }
+    }
+
+    .footer {
+        .menu {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .terms-tariff {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .benefits {
+        &__item {
+            min-height: 220px;
+        }
+
+        &__image {
+            min-height: 220px;
+            grid-row: 8;
+            background: image-set(url(../images/terms-benefits-7-tablet.avif), url(../images/terms-benefits-7-tablet.webp), url(../images/terms-benefits-7-tablet.png)) center / cover no-repeat;
+        }
+    }
+
+    .banner-2 {
+        &__container {
+            grid-template-columns: 1fr;
+            gap: 50px;
+            padding: 50px 20px 20px;
+            text-align: center;
+        }
+
+        &__box {
+            gap: 25px;
+        }
+
+        picture {
+            order: 1;
+
+            img {
+                height: 310px;
+            }
+        }
+
+        .btn {
+            max-width: 100%;
+        }
+    }
+
+    .platform-platform {
+        .heading {
+            p {
+                padding: 0;
+            }
+        }
+    }
+
+    .platform-advantages {
+        .heading {
+            p {
+                padding: 0;
+            }
+        }
+
+        &__list {
+            grid-template-columns: 1fr;
         }
     }
 }

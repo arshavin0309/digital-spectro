@@ -28,7 +28,7 @@
         }
     }
 
-    .main-banner {
+    .banner-1 {
         &__container {
             display: grid;
             grid-template-columns: 1fr;
@@ -36,6 +36,12 @@
 
         &__image-1 {
             display: none;
+        }
+    }
+
+    .swiper3 {
+        &__top {
+            grid-template-columns: 1fr;
         }
     }
 }

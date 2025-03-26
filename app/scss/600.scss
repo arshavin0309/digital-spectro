@@ -122,6 +122,10 @@
             background-size: 327px 160px;
             background-position: center bottom;
         }
+
+        .btn {
+            inset: auto 15px 17px;
+        }
     }
 
     .main-start {
@@ -180,7 +184,7 @@
         }
     }
 
-    .main-banner {
+    .banner-1 {
         h2 {
             max-width: 100%;
             font-size: 23px;
@@ -201,6 +205,101 @@
 
         &::before {
             height: 280px;
+        }
+    }
+
+    .footer {
+        .menu {
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+    }
+
+    .terms-tariff {
+        &__item {
+            padding: 30px 15px;
+        }
+    }
+
+    .benefits {
+        &__image {
+            background: image-set(url(../images/terms-benefits-7-mobile.avif), url(../images/terms-benefits-7-mobile.webp), url(../images/terms-benefits-7-mobile.png)) center / cover no-repeat;
+        }
+    }
+
+    .banner-2 {
+        &__container {
+            gap: 30px;
+        }
+
+        picture {
+            img {
+                height: 300px;
+            }
+        }
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .platform-platform {
+        &__item {
+            padding: 30px 15px;
+
+            &.custom {
+                min-height: 425px;
+
+                &::after {
+                    background-size: 256px 246px;
+                    background-position: right 35px bottom;
+                }
+            }
+        }
+    }
+
+    .swiper3 {
+        .swiper-slide {
+            padding: 30px 15px;
+        }
+    }
+
+    .banner-3 {
+        h2 {
+            font-size: 24px;
+            line-height: 26px;
+        }
+
+        p {
+            max-width: 270px;
+        }
+    }
+
+    .overview-charts {
+        &__container {
+            padding: 25px 15px;
+        }
+    }
+
+    .overview-condition {
+        &__container {
+            padding: 25px 15px;
+        }
+    }
+
+    .overview-events {
+        &__container {
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        &__events {
+            padding: 25px 15px;
+        }
+
+        &__leaders {
+            padding: 25px 15px;
         }
     }
 }

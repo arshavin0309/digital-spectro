@@ -609,6 +609,10 @@ section>.container>.title {
         border-radius: 20px;
         background: var(--blue-light) image-set(url(../images/main-platform.avif), url(../images/main-platform.webp), url(../images/main-platform.png)) bottom center / 445px 220px no-repeat;
 
+        h3 {
+            margin: 0;
+        }
+
         .btn {
             text-align: center;
         }
@@ -980,16 +984,16 @@ section>.container>.title {
 .terms-hero {
     .container {
         display: grid;
-        grid-template-columns: 840px;
+        grid-template-columns: 1fr;
         justify-items: start;
+    }
+
+    p {
+        max-width: 840px;
     }
 }
 
 .terms-tariff {
-    .heading {
-        grid-template-columns: 1fr 475px;
-    }
-
     &__list {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -1019,6 +1023,10 @@ section>.container>.title {
 
             .h2 {
                 color: var(--white);
+
+                &+p {
+                    color: var(--white);
+                }
             }
 
             ul {
@@ -1056,6 +1064,10 @@ section>.container>.title {
             font-size: 52px;
             line-height: 56px;
             font-weight: 500;
+
+            &+p {
+                color: var(--black);
+            }
         }
 
         ul {
@@ -1069,7 +1081,7 @@ section>.container>.title {
                 grid-template-columns: 10px 1fr;
                 gap: 10px;
                 align-items: start;
-                color: var(--black);
+                color: var(--grey-text);
 
                 &::before {
                     content: '';
@@ -1133,13 +1145,34 @@ section>.container>.title {
     }
 
     h2 {
+        margin: 0;
         color: var(--white);
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: space-between;
     }
 
     .btn {
         width: 100%;
         max-width: 490px;
+        margin: 0;
         text-align: center;
+    }
+
+    picture {
+        display: block;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
     }
 }
 
@@ -1219,7 +1252,7 @@ section>.container>.title {
                 inset: 0;
                 width: 100%;
                 height: 100%;
-                background: var(--blue-dark) url(../images/mobile-trader-decor.svg);
+                background: var(--blue-dark) url(../images/mobile-trader-decor.svg) right center / contain no-repeat;
                 animation: animationLine-down 20s ease-in-out infinite;
             }
 
@@ -1946,7 +1979,7 @@ section>.container>.title {
 
     label[for=checkbox] {
         display: grid;
-        grid-template-columns: 40px 1fr;
+        grid-template-columns: 25px 1fr;
         gap: 20px;
         align-items: center;
 
@@ -1958,8 +1991,8 @@ section>.container>.title {
     }
 
     input[type=checkbox] {
-        width: 40px;
-        height: 40px;
+        width: 25px;
+        height: 25px;
     }
 
     picture {
