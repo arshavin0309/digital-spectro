@@ -1636,6 +1636,17 @@ section>.container>.title {
     p {
         max-width: 800px;
     }
+
+    picture {
+        display: block;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
 }
 
 .about-mission {
@@ -2023,6 +2034,17 @@ section>.container>.title {
         font-size: 128px;
         line-height: 130px;
         font-weight: 700;
+    }
+
+    picture {
+        display: block;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain
+        }
     }
 }
 

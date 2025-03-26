@@ -36,4 +36,31 @@
             column-gap: 50px;
         }
     }
+
+    .about-numbers {
+        &__container {
+            padding: 50px 25px;
+        }
+    }
+
+    .contacts-info {
+        &__container {
+            grid-template-columns: 1fr;
+        }
+
+        picture {
+            padding: 0;
+            grid-column: initial;
+            grid-row: initial;
+
+            img {
+                max-width: 520px;
+                margin: auto;
+            }
+        }
+
+        form {
+            max-width: 575px;
+        }
+    }
 }

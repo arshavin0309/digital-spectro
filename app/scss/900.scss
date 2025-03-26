@@ -62,4 +62,22 @@
             background-image: image-set(url(../images/banner-2-tablet.avif), url(../images/banner-2-tablet.webp), url(../images/banner-2-tablet.png));
         }
     }
+
+    .about-numbers {
+        &__list {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        &__item {
+            &:nth-child(3) {
+                grid-column: initial;
+                grid-row: initial;
+
+                p {
+                    max-width: 380px;
+                }
+            }
+        }
+    }
 }

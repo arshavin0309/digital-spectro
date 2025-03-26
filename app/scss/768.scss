@@ -97,4 +97,57 @@
             grid-template-columns: 1fr;
         }
     }
+
+    .about-hero {
+        .container {
+            grid-template-columns: 1fr;
+        }
+
+        h2 {
+            max-width: 610px;
+        }
+
+        p {
+            max-width: 550px;
+        }
+    }
+
+    .about-mission {
+        &__container {
+            padding: 275px 30px 30px;
+        }
+
+        &__box {
+            padding: 30px 25px;
+
+            p {
+                max-width: 450px;
+            }
+        }
+    }
+
+    .about-unique {
+        h2 {
+            font-size: 32px;
+            line-height: 36px;
+        }
+
+        &__list {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .error-hero {
+        .container {
+            grid-template-columns: 1fr;
+            gap: 45px;
+        }
+
+        picture {
+            img {
+                max-width: 500px;
+                margin: auto;
+            }
+        }
+    }
 }

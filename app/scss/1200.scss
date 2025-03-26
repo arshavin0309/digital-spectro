@@ -7,7 +7,8 @@
         }
 
         &.active {
-            background: var(--blue-light);
+            //background: var(--blue-light);
+            background: #dae6f3d9;
         }
 
         &__logo {
@@ -36,11 +37,13 @@
             width: 100%;
             max-width: 400px;
             height: calc(100% - 80px);
-            background: var(--blue-light);
+            //background: var(--blue-light);
             transform: translateX(400px);
             border-top: 1px solid var(--grey-text);
             box-shadow: 0px 14px 20px 0px rgba(34, 60, 80, 0.2);
             list-style: none;
+            background: #dae6f3d9;
+            backdrop-filter: blur(10px);
 
             &.active {
                 transform: none;
@@ -71,6 +74,7 @@
                             padding: 20px 50px;
                             color: var(--black);
                             text-decoration: none;
+                            background: #dfedffbf;
                         }
                     }
                 }
@@ -254,6 +258,25 @@
     .overview-events {
         &__container {
             gap: 100px;
+        }
+    }
+
+    .about-hero {
+        .container {
+            grid-template-columns: 1fr 450px;
+            gap: 50px;
+        }
+    }
+
+    .about-unique {
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .error-hero {
+        h1 {
+            font-size: 64px;
         }
     }
 }

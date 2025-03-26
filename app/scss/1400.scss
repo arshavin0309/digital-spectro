@@ -64,4 +64,11 @@
             border-radius: 20px;
         }
     }
+
+    .contacts-info {
+        &__container {
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+    }
 }

@@ -100,4 +100,17 @@
             }
         }
     }
+
+    .about-hero {
+        .container {
+            grid-template-columns: 1fr 300px;
+        }
+
+        picture {
+            img {
+                max-width: 450px;
+                margin: auto;
+            }
+        }
+    }
 }
