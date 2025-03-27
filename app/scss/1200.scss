@@ -85,6 +85,18 @@
     section {
         margin-top: 100px;
         margin-bottom: 100px;
+
+        &.main-hero {
+            margin-top: 0;
+        }
+
+        &.about-hero {
+            margin-top: 0;
+        }
+    
+        &.error-hero {
+            margin-top: 0;
+        }
     }
 
     h1 {

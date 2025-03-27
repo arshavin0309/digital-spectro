@@ -124,6 +124,7 @@
         }
 
         .btn {
+            width: auto;
             inset: auto 15px 17px;
         }
     }
@@ -446,10 +447,6 @@
     .error-hero {
         .container {
             gap: 40px;
-        }
-
-        h1 {
-            font-size: 52px;
         }
 
         p {
