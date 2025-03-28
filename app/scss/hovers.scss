@@ -268,4 +268,16 @@
             }
         }
     }
+
+    .wpcf7-list-item {
+        label {
+            span {
+                a {
+                    &:hover {
+                        color: var(--blue-activ);
+                    }
+                }
+            }
+        }
+    }
 }

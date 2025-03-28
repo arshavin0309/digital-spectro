@@ -2048,6 +2048,56 @@ section>.container>.title {
     }
 }
 
+.wpcf7-list-item {
+    margin: 0;
+
+    label {
+        display: grid;
+        grid-template-columns: 25px 1fr;
+        align-items: center;
+        gap: 20px;
+
+        span {
+            font-size: 16px;
+            line-height: 18px;
+            font-weight: 300;
+
+            a {
+                color: var(--black);
+            }
+        }
+    }
+}
+
+.wpcf7-response-output {
+    margin: 20px 0 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.wpcf7-form-control-wrap {
+    display: block;
+}
+
+.wpcf7-form-control {
+    display: block;
+}
+
+.contacts-info__submit {
+    position: relative;
+    display: inline-block;
+}
+
+.wpcf7-spinner {
+    position: absolute;
+    bottom: 10px;
+    right: -60px;
+}
+
+.wpcf7-not-valid-tip {
+    margin: 20px 0;
+}
+
 @import '../scss/hovers';
 @import '../scss/1800';
 @import '../scss/1700';
